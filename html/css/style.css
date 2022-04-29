@@ -1,0 +1,75 @@
+body {
+    background-color: transparent !important;
+}
+
+.notification_container {
+    width: 30%;
+    position: absolute;
+    right: 5%;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+
+.notification {
+    padding: 10px;
+    width: fit-content;
+    border-radius: 5px;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.6);
+    margin: 10px;
+    font: caption;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.primary {
+    background-color: rgba(12, 13, 14, 0.5);
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    color: #ffffff;
+}
+
+.primary i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.success {
+    background-color: rgba(57, 198, 68, 0.5);
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    color: #ffffff;
+}
+
+.success i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.error {
+    background-color: rgba(198, 57, 57, 0.5);
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    color: #ffffff;
+}
+
+.error i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.police {
+    background-color: rgba(0, 128, 255, 0.5);
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    color: #ffffff;
+}
+
+.police i {
+    font-size: 20px;
+    margin-right: 10px;
+}
