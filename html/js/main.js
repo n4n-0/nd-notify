@@ -10,9 +10,18 @@
 window.addEventListener('message', function(e) {
     ShowNotification(e.data);
 })
-
+function escapeHtml(unsafe)
+{
+    return unsafe
+         .replace(/&/g, "&amp;")
+         .replace(/</g, "&lt;")
+         .replace(/>/g, "&gt;")
+         .replace(/"/g, "&quot;")
+         .replace(/'/g, "&#039;");
+ }
 const CreateNotification = (data) => {
     var $notification = $(document.createElement('div'));
+    let text = escapeHtml(data.text)
     switch (data.type) {
         case 'primary':
             var $icon = '<i class="fa-solid fa-circle-info"></i>'
@@ -28,7 +37,7 @@ const CreateNotification = (data) => {
             break;
     }
     $notification.addClass('notification').addClass(data.type);
-    $notification.html($icon + ' ' + data.text);
+    $notification.html($icon + ' ' + text);
     $notification.fadeIn(1000);
     if (data.style !== undefined) {
         Object.keys(data.style).forEach(function(css) {
