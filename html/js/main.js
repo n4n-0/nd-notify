@@ -2,7 +2,6 @@ window.addEventListener('message', function (e) {
   ShowNotification(e.data);
 })
 
-
 const ICONS_TYPES = {
   'primary': '<i class="fa-solid fa-circle-info"></i>',
   "error": '<i class="fa-solid fa-circle-exclamation"></i>',
